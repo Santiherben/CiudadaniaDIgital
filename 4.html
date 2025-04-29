@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aportes Filosóficos - Slide 4</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f0f4f8;
+            overflow-x: hidden;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+            color: white;
+        }
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .network-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 20%),
+                radial-gradient(circle at 80% 30%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 20%),
+                radial-gradient(circle at 40% 70%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 20%),
+                radial-gradient(circle at 90% 90%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 20%);
+            z-index: 0;
+        }
+        .content {
+            position: relative;
+            z-index: 1;
+        }
+        .page-number {
+            position: absolute;
+            bottom: 20px;
+            right: 30px;
+            font-size: 14px;
+            opacity: 0.5;
+        }
+        .philosophy-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+            border-left: 4px solid;
+            position: relative;
+            overflow: hidden;
+        }
+        .philosophy-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .philosopher-img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid;
+        }
+        .concept-bubble {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(3px);
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+        .concept-bubble:hover {
+            transform: scale(1.02);
+            background: rgba(255, 255, 255, 0.15);
+        }
+        .quote {
+            font-style: italic;
+            position: relative;
+            padding-left: 24px;
+        }
+        .quote::before {
+    content: "“";
+    position: absolute;
+    left: 0;
+    top: -8px;
+    font-size: 42px;
+    opacity: 0.4;
+    font-family: Georgia, serif;
+}
+
+        .pattern-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.1;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col">
+        <div class="network-bg"></div>
+        <div class="pattern-overlay"></div>
+        
+        <!-- Abstract network design elements -->
+        <svg class="absolute inset-0 w-full h-full opacity-10" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                    <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+                    <feMerge>
+                        <feMergeNode in="coloredBlur"/>
+                        <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                </filter>
+            </defs>
+            
+            <!-- Connection lines representing knowledge flow -->
+            <line x1="150" y1="200" x2="350" y2="180" stroke="#4299e1" stroke-width="1" />
+            <line x1="350" y1="180" x2="550" y2="220" stroke="#4299e1" stroke-width="1" />
+            <line x1="550" y1="220" x2="750" y2="150" stroke="#4299e1" stroke-width="1" />
+            <line x1="750" y1="150" x2="950" y2="200" stroke="#4299e1" stroke-width="1" />
+            <line x1="950" y1="200" x2="1150" y2="220" stroke="#4299e1" stroke-width="1" />
+            
+            <line x1="150" y1="500" x2="350" y2="530" stroke="#4299e1" stroke-width="1" />
+            <line x1="350" y1="530" x2="550" y2="480" stroke="#4299e1" stroke-width="1" />
+            <line x1="550" y1="480" x2="750" y2="520" stroke="#4299e1" stroke-width="1" />
+            <line x1="750" y1="520" x2="950" y2="490" stroke="#4299e1" stroke-width="1" />
+            <line x1="950" y1="490" x2="1150" y2="530" stroke="#4299e1" stroke-width="1" />
+            
+            <line x1="150" y1="200" x2="150" y2="500" stroke="#4299e1" stroke-width="1" opacity="0.5" />
+            <line x1="550" y1="220" x2="550" y2="480" stroke="#4299e1" stroke-width="1" opacity="0.5" />
+            <line x1="950" y1="200" x2="950" y2="490" stroke="#4299e1" stroke-width="1" opacity="0.5" />
+            
+            <!-- Knowledge nodes -->
+            <circle cx="150" cy="200" r="6" fill="#ff6b6b" filter="url(#glow)" />
+            <circle cx="350" cy="180" r="4" fill="#4299e1" filter="url(#glow)" />
+            <circle cx="550" cy="220" r="8" fill="#4299e1" filter="url(#glow)" />
+            <circle cx="750" cy="150" r="5" fill="#ff6b6b" filter="url(#glow)" />
+            <circle cx="950" cy="200" r="7" fill="#4299e1" filter="url(#glow)" />
+            <circle cx="1150" cy="220" r="4" fill="#ff6b6b" filter="url(#glow)" />
+            
+            <circle cx="150" cy="500" r="5" fill="#4299e1" filter="url(#glow)" />
+            <circle cx="350" cy="530" r="7" fill="#ff6b6b" filter="url(#glow)" />
+            <circle cx="550" cy="480" r="4" fill="#4299e1" filter="url(#glow)" />
+            <circle cx="750" cy="520" r="8" fill="#ff6b6b" filter="url(#glow)" />
+            <circle cx="950" cy="490" r="5" fill="#4299e1" filter="url(#glow)" />
+            <circle cx="1150" cy="530" r="6" fill="#4299e1" filter="url(#glow)" />
+        </svg>
+        
+        <div class="content px-16 py-12 w-full h-full flex flex-col">
+            <div class="mb-4">
+                <h2 class="text-2xl font-semibold text-gray-300 tracking-wide">
+                    <span class="inline-block mr-2"><i class="fas fa-brain text-purple-400"></i></span>
+                    Aportes Filosóficos
+                </h2>
+            </div>
+            
+            <h1 class="text-4xl font-bold mb-6 text-white border-b border-purple-400 pb-2 inline-block">
+                Reflexiones Sobre la Era Digital
+            </h1>
+            
+            <div class="flex flex-col space-y-6">
+                <!-- Eric Sadin Section -->
+                <div class="philosophy-card border-orange-500 p-6 rounded-lg">
+                    <div class="flex">
+                        <div class="mr-6 flex flex-col items-center">
+                            <div class="h-24 w-24 bg-orange-500 bg-opacity-20 rounded-full flex items-center justify-center mb-2 overflow-hidden">
+                                <i class="fas fa-microchip text-orange-400 text-4xl"></i>
+                            </div>
+                            <h3 class="text-lg font-semibold text-orange-300">Eric Sadin</h3>
+                            <p class="text-xs text-gray-400">Filósofo y escritor</p>
+                        </div>
+                        <div>
+                            <div class="mb-3">
+                                <h4 class="text-xl font-semibold mb-2">Del Humano Digital al Humano Instrumentalizado</h4>
+                                <div class="quote text-gray-300 mb-3">
+                                    La tecnología ha dejado de ser una herramienta para convertirse en un sistema que nos instrumentaliza, dirigiendo nuestros comportamientos y decisiones sin que seamos plenamente conscientes de ello.
+                                </div>
+                            </div>
+                            <div class="flex flex-wrap">
+                                <span class="bg-orange-900 bg-opacity-40 text-orange-300 text-xs px-3 py-1 rounded-full mr-2 mb-2">Silicolonización de la vida</span>
+                                <span class="bg-orange-900 bg-opacity-40 text-orange-300 text-xs px-3 py-1 rounded-full mr-2 mb-2">Tecnoliberalismo</span>
+                                <span class="bg-orange-900 bg-opacity-40 text-orange-300 text-xs px-3 py-1 rounded-full mr-2 mb-2">Agencia humana vs algorítmica</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Yuval Noah Harari Section -->
+                <div class="philosophy-card border-blue-400 p-6 rounded-lg">
+                    <div class="flex">
+                        <div class="mr-6 flex flex-col items-center">
+                            <div class="h-24 w-24 bg-blue-500 bg-opacity-20 rounded-full flex items-center justify-center mb-2 overflow-hidden">
+                                <i class="fas fa-dna text-blue-400 text-4xl"></i>
+                            </div>
+                            <h3 class="text-lg font-semibold text-blue-300">Yuval Noah Harari</h3>
+                            <p class="text-xs text-gray-400">Historiador y pensador</p>
+                        </div>
+                        <div>
+                            <div class="mb-3">
+                                <h4 class="text-xl font-semibold mb-2">¿Autonomía Humana o Delegación Algorítmica?</h4>
+                                <div class="quote text-gray-300 mb-3">
+                                    Pronto los algoritmos nos conocerán mejor que nosotros mismos. La pregunta crítica es: ¿seguiremos siendo autónomos o delegaremos nuestras decisiones más importantes a algoritmos que prometen optimizar nuestra vida?
+                                </div>
+                            </div>
+                            <div class="flex flex-wrap">
+                                <span class="bg-blue-900 bg-opacity-40 text-blue-300 text-xs px-3 py-1 rounded-full mr-2 mb-2">Homo Deus</span>
+                                <span class="bg-blue-900 bg-opacity-40 text-blue-300 text-xs px-3 py-1 rounded-full mr-2 mb-2">Autoridad algorítmica</span>
+                                <span class="bg-blue-900 bg-opacity-40 text-blue-300 text-xs px-3 py-1 rounded-full mr-2 mb-2">Futuro de la consciencia</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Conceptual Space for Debate -->
+                <div class="grid grid-cols-3 gap-4">
+                    <div class="concept-bubble p-4 flex flex-col items-center text-center">
+                        <div class="h-12 w-12 rounded-full bg-purple-500 bg-opacity-30 flex items-center justify-center mb-2">
+                            <i class="fas fa-id-card text-purple-300 text-xl"></i>
+                        </div>
+                        <h4 class="font-semibold mb-1">Identidad</h4>
+                        <p class="text-xs text-gray-300">¿Cómo se construye la identidad en un mundo digital donde nos mostramos a través de perfiles y contenidos fragmentados?</p>
+                    </div>
+                    
+                    <div class="concept-bubble p-4 flex flex-col items-center text-center">
+                        <div class="h-12 w-12 rounded-full bg-red-500 bg-opacity-30 flex items-center justify-center mb-2">
+                            <i class="fas fa-hand-paper text-red-300 text-xl"></i>
+                        </div>
+                        <h4 class="font-semibold mb-1">Agencia</h4>
+                        <p class="text-xs text-gray-300">¿Cuánto control real tenemos sobre nuestras decisiones en un entorno mediado por algoritmos predictivos?</p>
+                    </div>
+                    
+                    <div class="concept-bubble p-4 flex flex-col items-center text-center">
+                        <div class="h-12 w-12 rounded-full bg-green-500 bg-opacity-30 flex items-center justify-center mb-2">
+                            <i class="fas fa-graduation-cap text-green-300 text-xl"></i>
+                        </div>
+                        <h4 class="font-semibold mb-1">Educación Crítica</h4>
+                        <p class="text-xs text-gray-300">¿Cómo formar pensamiento crítico que permita navegar conscientemente un mundo digital diseñado para capturar atención?</p>
+                    </div>
+                </div>
+                
+                <!-- Final thought -->
+                <div class="mt-auto bg-gray-800 bg-opacity-50 p-4 rounded-lg border-l-4 border-yellow-400">
+                    <div class="flex items-center">
+                        <i class="fas fa-lightbulb text-yellow-400 text-xl mr-3"></i>
+                        <p class="text-sm italic">
+                            "El desafío no es solo apropiarnos de la tecnología, sino desarrollar la capacidad crítica para distinguir cuándo ésta nos potencia y cuándo nos instrumentaliza."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="page-number">4/8</div>
+
+        
+    </div>
+
+    <footer>
+        Prof. Esp. Santiago Hernández | Licencia: CC BY 4.0
+    </footer> 
+</body>
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas de Reflexión Final - Slide 6</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Open Sans', sans-serif;
+        background-color: #f0f4f8;
+        overflow-x: hidden;
+        overflow-y: auto; /* habilitar scroll vertical */
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer {
+        margin-top: auto;
+        background-color: #1a365d;
+        color: #cbd5e0;
+        text-align: center;
+        font-size: 0.8rem;
+        padding: 10px 0;
+    }
+
+
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+            color: white;
+        }
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .network-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 20%),
+                radial-gradient(circle at 80% 30%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 20%),
+                radial-gradient(circle at 40% 70%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 20%),
+                radial-gradient(circle at 90% 90%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 20%);
+            z-index: 0;
+        }
+        .content {
+            position: relative;
+            z-index: 1;
+        }
+        .page-number {
+            position: absolute;
+            bottom: 20px;
+            right: 30px;
+            font-size: 14px;
+            opacity: 0.5;
+        }
+        .question-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+            border-left: 4px solid;
+            position: relative;
+            overflow: hidden;
+        }
+        .question-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .icon-container {
+            width: 64px;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-bottom: 16px;
+            transition: transform 0.3s ease;
+        }
+        .question-card:hover .icon-container {
+            transform: scale(1.1) rotate(5deg);
+        }
+        .pattern-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.05;
+            z-index: -1;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .pulse-animation {
+            animation: pulse 4s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col">
+        <div class="network-bg"></div>
+        <div class="pattern-overlay"></div>
+        
+        <!-- Abstract network design elements -->
+        <svg class="absolute inset-0 w-full h-full opacity-10" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                    <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+                    <feMerge>
+                        <feMergeNode in="coloredBlur"/>
+                        <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                </filter>
+            </defs>
+            
+            <!-- Connection lines -->
+            <line x1="180" y1="150" x2="480" y2="250" stroke="#4299e1" stroke-width="1" />
+            <line x1="480" y1="250" x2="750" y2="180" stroke="#4299e1" stroke-width="1" />
+            <line x1="750" y1="180" x2="1000" y2="300" stroke="#4299e1" stroke-width="1" />
+            <line x1="1000" y1="300" x2="1100" y2="180" stroke="#4299e1" stroke-width="1" />
+            
+            <line x1="180" y1="500" x2="480" y2="450" stroke="#4299e1" stroke-width="1" />
+            <line x1="480" y1="450" x2="750" y2="520" stroke="#4299e1" stroke-width="1" />
+            <line x1="750" y1="520" x2="1000" y2="450" stroke="#4299e1" stroke-width="1" />
+            <line x1="1000" y1="450" x2="1100" y2="550" stroke="#4299e1" stroke-width="1" />
+            
+            <line x1="180" y1="150" x2="180" y2="500" stroke="#4299e1" stroke-width="1" opacity="0.5" />
+            <line x1="480" y1="250" x2="480" y2="450" stroke="#4299e1" stroke-width="1" opacity="0.5" />
+            <line x1="750" y1="180" x2="750" y2="520" stroke="#4299e1" stroke-width="1" opacity="0.5" />
+            <line x1="1000" y1="300" x2="1000" y2="450" stroke="#4299e1" stroke-width="1" opacity="0.5" />
+            <line x1="1100" y1="180" x2="1100" y2="550" stroke="#4299e1" stroke-width="1" opacity="0.5" />
+            
+            <!-- Network nodes -->
+            <circle cx="180" cy="150" r="6" fill="#ff6b6b" filter="url(#glow)" />
+            <circle cx="480" cy="250" r="8" fill="#4299e1" filter="url(#glow)" />
+            <circle cx="750" cy="180" r="5" fill="#4299e1" filter="url(#glow)" />
+            <circle cx="1000" cy="300" r="7" fill="#ff6b6b" filter="url(#glow)" />
+            <circle cx="1100" cy="180" r="4" fill="#4299e1" filter="url(#glow)" />
+            
+            <circle cx="180" cy="500" r="7" fill="#4299e1" filter="url(#glow)" />
+            <circle cx="480" cy="450" r="5" fill="#ff6b6b" filter="url(#glow)" />
+            <circle cx="750" cy="520" r="8" fill="#4299e1" filter="url(#glow)" />
+            <circle cx="1000" cy="450" r="6" fill="#4299e1" filter="url(#glow)" />
+            <circle cx="1100" cy="550" r="5" fill="#ff6b6b" filter="url(#glow)" />
+        </svg>
+        
+        <div class="content px-16 py-12 w-full h-full flex flex-col">
+            <div class="mb-4">
+                <h2 class="text-2xl font-semibold text-gray-300 tracking-wide">
+                    <span class="inline-block mr-2"><i class="fas fa-question-circle text-orange-400"></i></span>
+                    Preguntas de Reflexión Final
+                </h2>
+            </div>
+            
+            <h1 class="text-4xl font-bold mb-8 text-white border-b border-orange-400 pb-2 inline-block">
+                Repensando Nuestra Relación Digital
+            </h1>
+            
+            <div class="grid grid-cols-2 gap-6 flex-grow">
+                <!-- Pregunta 1 -->
+                <div class="question-card border-blue-400 p-6 rounded-lg flex flex-col items-start">
+                    <div class="icon-container bg-blue-800 bg-opacity-30 mb-4 pulse-animation">
+                        <i class="fas fa-cogs text-blue-400 text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-blue-300">¿Qué parte de tu vida diaria está mediada por un algoritmo?</h3>
+                    <div class="text-sm text-gray-300 space-y-2">
+                        <p>Desde que nos despertamos hasta que nos acostamos, gran parte de nuestras actividades están influenciadas por algoritmos:</p>
+                        <ul class="list-disc ml-5 space-y-1 mt-2">
+                            <li>Lo que vemos en redes sociales</li>
+                            <li>Las rutas que seguimos</li>
+                            <li>La música que escuchamos</li>
+                            <li>Las noticias que consumimos</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Pregunta 2 -->
+                <div class="question-card border-orange-500 p-6 rounded-lg flex flex-col items-start">
+                    <div class="icon-container bg-orange-800 bg-opacity-30 mb-4 pulse-animation">
+                        <i class="fas fa-heartbeat text-orange-400 text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-orange-300">¿Cómo te afecta emocionalmente el uso de redes?</h3>
+                    <div class="text-sm text-gray-300 space-y-2">
+                        <p>Las investigaciones muestran vínculos entre el uso intensivo de redes sociales y:</p>
+                        <ul class="list-disc ml-5 space-y-1 mt-2">
+                            <li>Ansiedad social y comparativa</li>
+                            <li>Búsqueda constante de validación</li>
+                            <li>FOMO (miedo a perderse experiencias)</li>
+                            <li>Dopamina y ciclos de recompensa</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Pregunta 3 -->
+                <div class="question-card border-green-500 p-6 rounded-lg flex flex-col items-start">
+                    <div class="icon-container bg-green-800 bg-opacity-30 mb-4 pulse-animation">
+                        <i class="fas fa-fingerprint text-green-400 text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-green-300">¿Qué huella digital estás dejando?</h3>
+                    <div class="text-sm text-gray-300 space-y-2">
+                        <p>Cada interacción online deja un rastro permanente que construye tu identidad digital:</p>
+                        <ul class="list-disc ml-5 space-y-1 mt-2">
+                            <li>¿Qué pensarán otros de ti en base a tu contenido?</li>
+                            <li>¿Has compartido información que podría afectarte después?</li>
+                            <li>¿Cuántos datos personales están expuestos?</li>
+                            <li>¿Es tu huella consciente o involuntaria?</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Pregunta 4 -->
+                <div class="question-card border-purple-500 p-6 rounded-lg flex flex-col items-start">
+                    <div class="icon-container bg-purple-800 bg-opacity-30 mb-4 pulse-animation">
+                        <i class="fas fa-hand-paper text-purple-400 text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-purple-300">¿Cuánto control tenés realmente sobre lo que ves y haces en línea?</h3>
+                    <div class="text-sm text-gray-300 space-y-2">
+                        <p>El diseño de plataformas digitales busca maximizar nuestro tiempo de uso:</p>
+                        <ul class="list-disc ml-5 space-y-1 mt-2">
+                            <li>Los algoritmos personalizados crean burbujas de contenido</li>
+                            <li>Las notificaciones y diseños adictivos captan nuestra atención</li>
+                            <li>La publicidad dirigida influye en nuestras decisiones</li>
+                            <li>La arquitectura digital moldea nuestros comportamientos</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-auto">
+                <div class="flex justify-center mt-6">
+                    <div class="bg-gray-800 bg-opacity-50 p-4 rounded-lg border-l-4 border-yellow-400 max-w-3xl">
+                        <div class="flex items-start">
+                            <i class="fas fa-lightbulb text-yellow-400 text-xl mr-3 mt-1"></i>
+                            <p class="text-sm italic">
+                                "La pregunta no es si la tecnología es buena o mala, sino qué hacemos con ella y cómo nos relacionamos conscientemente con las herramientas digitales que utilizamos a diario."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="page-number">6/8</div>
+    </div>
+    <footer>
+        Prof. Esp. Santiago Hernández | Licencia: CC BY 4.0
+    </footer>
+    
+</body>
+</html>

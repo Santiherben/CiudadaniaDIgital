@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cierre | Impacto de las Redes Sociales</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: 'Open Sans', sans-serif;
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+            color: #f9fafb;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .slide-title {
+            font-weight: 700;
+            font-size: 2.5rem;
+            line-height: 1.2;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        .network-bg {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 800 800"><g fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"><path d="M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63"/><path d="M-31 229L237 261 390 382 731 154 769 229 695 311 769 229"/><path d="M520 660L578 842 731 737 840 599 769 229 520 660 295 764 40 599 520 660"/><path d="M520 660L-31 229 126.5 79.5 237 261 102 382 40 599 520 660"/></g></svg>');
+            opacity: 0.8;
+            z-index: -1;
+        }
+        .accent-line {
+            height: 4px;
+            width: 120px;
+            background: linear-gradient(90deg, #f97316 0%, #ef4444 100%);
+            margin: 1rem auto;
+            border-radius: 2px;
+        }
+        .action-card {
+            background-color: rgba(30, 58, 138, 0.6);
+            border-radius: 12px;
+            backdrop-filter: blur(5px);
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            border-left: 4px solid #f97316;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .action-card:hover {
+            transform: translateX(10px);
+        }
+        .action-title {
+            font-weight: 700;
+            font-size: 1.4rem;
+            margin-bottom: 0.8rem;
+            color: #f97316;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .action-content {
+            font-size: 1.1rem;
+            line-height: 1.5;
+        }
+        .final-quote {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            font-style: italic;
+            text-align: center;
+            margin-top: 2rem;
+            line-height: 1.3;
+            position: relative;
+            z-index: 10;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        .icon-circle {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #f97316, #ef4444);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1.5rem;
+            flex-shrink: 0;
+            box-shadow: 0 5px 15px rgba(239, 68, 68, 0.3);
+        }
+        .hexagon-bg {
+            position: absolute;
+            right: -20px;
+            bottom: -20px;
+            width: 150px;
+            height: 150px;
+            opacity: 0.07;
+            z-index: 0;
+        }
+        .subtitle {
+            font-weight: 500;
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-top: 0.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container flex flex-col p-16 relative">
+        <div class="network-bg"></div>
+        
+        <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-orange-500 to-red-500"></div>
+        
+        <h1 class="slide-title text-center">Cierre con llamado a la acción</h1>
+        <div class="accent-line"></div>
+        <p class="subtitle">Construyendo el futuro digital de las nuevas generaciones</p>
+        
+        <div class="flex-grow">
+            <!-- Action Point 1 -->
+            <div class="action-card">
+                <svg class="hexagon-bg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="50 0, 93.3 25, 93.3 75, 50 100, 6.7 75, 6.7 25" fill="#ffffff"/>
+                </svg>
+                <div class="flex items-center z-10 relative">
+                    <div class="icon-circle">
+                        <i class="fas fa-book-reader text-2xl text-white"></i>
+                    </div>
+                    <div>
+                        <h3 class="action-title">Alfabetización digital crítica</h3>
+                        <p class="action-content">
+                            Necesitamos desarrollar habilidades que vayan más allá del uso instrumental de la tecnología, 
+                            fomentando la capacidad de análisis, verificación de fuentes y comprensión de los modelos de negocio 
+                            que subyacen a las plataformas digitales.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Action Point 2 -->
+            <div class="action-card">
+                <svg class="hexagon-bg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="50 0, 93.3 25, 93.3 75, 50 100, 6.7 75, 6.7 25" fill="#ffffff"/>
+                </svg>
+                <div class="flex items-center z-10 relative">
+                    <div class="icon-circle">
+                        <i class="fas fa-brain text-2xl text-white"></i>
+                    </div>
+                    <div>
+                        <h3 class="action-title">Pensamiento Ético y Crítico</h3>
+                        <p class="action-content">
+                            Educar no es solo enseñar a usar herramientas, sino formar criterios para distinguir 
+                            entre lo valioso y lo superfluo, entre lo auténtico y lo manipulado, entre lo que nos potencia 
+                            y lo que nos limita como seres humanos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Action Point 3 -->
+            <div class="action-card">
+                <svg class="hexagon-bg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="50 0, 93.3 25, 93.3 75, 50 100, 6.7 75, 6.7 25" fill="#ffffff"/>
+                </svg>
+                <div class="flex items-center z-10 relative">
+                    <div class="icon-circle">
+                        <i class="fas fa-users-cog text-2xl text-white"></i>
+                    </div>
+                    <div>
+                        <h3 class="action-title">Usuarios Activos, No Consumidores Pasivos</h3>
+                        <p class="action-content">
+                            Debemos formar generaciones que creen y transformen la tecnología, no solo que la consuman. 
+                            Ciudadanos digitales conscientes de sus derechos, de su huella digital y de su capacidad 
+                            para influir en el desarrollo tecnológico futuro.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="final-quote mt-4">
+            "La tecnología más poderosa seguirá siendo siempre la mente humana crítica y consciente"
+        </div>
+        
+        <div class="absolute bottom-6 right-6 text-sm opacity-70">
+            <p>8/8 | Impacto de las Redes Sociales, Pantallas e IA</p>
+        </div>
+    </div>
+    <footer>
+        Prof. Esp. Santiago Hernández | Licencia: CC BY 4.0
+    </footer>
+</body>
+</html>

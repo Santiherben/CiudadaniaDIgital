@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presentación: Impacto Digital</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    header {
+      background-color: #1e3a8a;
+      padding: 1rem;
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 1.5rem;
+      border-bottom: 4px solid #f97316;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      background-color: #2d3748;
+      padding: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    nav button {
+      background-color: #1e3a8a;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    nav button:hover {
+      background-color: #f97316;
+    }
+
+    iframe {
+      flex-grow: 1;
+      width: 100%;
+      border: none;
+    }
+
+    footer {
+      background-color: #1a365d;
+      text-align: center;
+      font-size: 0.75rem;
+      color: #cbd5e0;
+      padding: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>Presentación: Impacto Digital</header>
+
+  <nav>
+    <button onclick="loadSlide('1.html')">1</button>
+    <button onclick="loadSlide('2.html')">2</button>
+    <button onclick="loadSlide('3.html')">3</button>
+    <button onclick="loadSlide('4.html')">4</button>
+    <button onclick="loadSlide('5.html')">5</button>
+    <button onclick="loadSlide('6.html')">6</button>
+    <button onclick="loadSlide('7.html')">7</button>
+  </nav>
+
+  <iframe id="viewer" src="1.html" height="100%" loading="lazy"></iframe>
+
+  <footer>Prof. Esp. Santiago Hernández | Licencia: CC BY 4.0</footer>
+
+  <script>
+    function loadSlide(file) {
+      document.getElementById('viewer').src = file;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos e Investigaciones Actuales - Slide 3</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f0f4f8;
+    overflow-x: hidden;
+    overflow-y: auto; /* permitir scroll vertical */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: auto;
+    background-color: #1a365d;
+    color: #cbd5e0;
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 10px 0;
+}
+
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+            color: white;
+        }
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .network-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 20%),
+                radial-gradient(circle at 80% 30%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 20%),
+                radial-gradient(circle at 40% 70%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 20%),
+                radial-gradient(circle at 90% 90%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 20%);
+            z-index: 0;
+        }
+        .content {
+            position: relative;
+            z-index: 1;
+        }
+        .page-number {
+            position: absolute;
+            bottom: 20px;
+            right: 30px;
+            font-size: 14px;
+            opacity: 0.5;
+        }
+        .data-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+            border-left: 4px solid;
+        }
+        .data-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .chart-container {
+            height: 220px;
+            width: 100%;
+            position: relative;
+        }
+        .stat-highlight {
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    color: #ff6b6b; /* fallback sólido si no funciona el gradiente */
+    background: linear-gradient(90deg, #ff6b6b, #ff9e7d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col">
+        <div class="network-bg"></div>
+        
+        <!-- Abstract network design elements -->
+        <svg class="absolute inset-0 w-full h-full opacity-10" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                    <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+                    <feMerge>
+                        <feMergeNode in="coloredBlur"/>
+                        <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                </filter>
+            </defs>
+            
+            <!-- Connection lines representing data flow -->
+            <line x1="200" y1="150" x2="400" y2="200" stroke="#4299e1" stroke-width="1" />
+            <line x1="400" y1="200" x2="600" y2="150" stroke="#4299e1" stroke-width="1" />
+            <line x1="600" y1="150" x2="800" y2="250" stroke="#4299e1" stroke-width="1" />
+            <line x1="800" y1="250" x2="1000" y2="200" stroke="#4299e1" stroke-width="1" />
+            <line x1="1000" y1="200" x2="1100" y2="300" stroke="#4299e1" stroke-width="1" />
+            <line x1="1100" y1="300" x2="950" y2="400" stroke="#4299e1" stroke-width="1" />
+            <line x1="950" y1="400" x2="750" y2="450" stroke="#4299e1" stroke-width="1" />
+            <line x1="750" y1="450" x2="500" y2="400" stroke="#4299e1" stroke-width="1" />
+            <line x1="500" y1="400" x2="300" y2="350" stroke="#4299e1" stroke-width="1" />
+            <line x1="300" y1="350" x2="200" y2="150" stroke="#4299e1" stroke-width="1" />
+            
+            <!-- Data nodes -->
+            <circle cx="200" cy="150" r="8" fill="#ff6b6b" filter="url(#glow)" />
+            <circle cx="400" cy="200" r="6" fill="#4299e1" filter="url(#glow)" />
+            <circle cx="600" cy="150" r="10" fill="#4299e1" filter="url(#glow)" />
+            <circle cx="800" cy="250" r="7" fill="#ff6b6b" filter="url(#glow)" />
+            <circle cx="1000" cy="200" r="8" fill="#4299e1" filter="url(#glow)" />
+            <circle cx="1100" cy="300" r="6" fill="#ff6b6b" filter="url(#glow)" />
+            <circle cx="950" cy="400" r="9" fill="#4299e1" filter="url(#glow)" />
+            <circle cx="750" cy="450" r="7" fill="#4299e1" filter="url(#glow)" />
+            <circle cx="500" cy="400" r="8" fill="#ff6b6b" filter="url(#glow)" />
+            <circle cx="300" cy="350" r="6" fill="#4299e1" filter="url(#glow)" />
+        </svg>
+        
+        <div class="content px-16 py-12 w-full h-full flex flex-col">
+            <div class="mb-4">
+                <h2 class="text-2xl font-semibold text-gray-300 tracking-wide">
+                    <span class="inline-block mr-2"><i class="fas fa-chart-bar text-blue-400"></i></span>
+                    Datos e Investigaciones Actuales
+                </h2>
+            </div>
+            
+            <h1 class="text-4xl font-bold mb-6 text-white border-b border-blue-400 pb-2 inline-block">
+                El Panorama Digital de las Nuevas Generaciones
+            </h1>
+            
+            <div class="grid grid-cols-2 gap-6 mt-2">
+                <!-- Left column with chart -->
+                <div class="flex flex-col">
+                    <div class="data-card border-orange-500 p-6 rounded-lg mb-6">
+                        <h3 class="text-xl font-semibold mb-3 text-orange-300">
+                            <i class="fas fa-clock mr-2"></i>Tiempo de Pantalla
+                        </h3>
+                        <div class="chart-container">
+                            <canvas id="screenTimeChart"></canvas>
+                        </div>
+                        <p class="text-sm text-gray-300 mt-2 italic">
+                            Niños y adolescentes pasan <span class="font-bold text-white">6 a 8 horas diarias</span> frente a pantallas, superando el tiempo dedicado a otras actividades esenciales.
+                        </p>
+                        <p class="text-xs text-gray-400 mt-1">
+                            Fuente: Common Sense Media (2023), Statista, Pew Research Center.
+                        </p>
+                        
+                    </div>
+                    
+                    <div class="data-card border-blue-400 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-3 text-blue-300">
+                            <i class="fas fa-globe-americas mr-2"></i>Informe UNESCO 2023
+                        </h3>
+                        <div class="flex items-center mb-3">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/UNESCO_logo.svg/200px-UNESCO_logo.svg.png" alt="UNESCO logo" class="h-12 mr-4">
+                            <div>
+                                <h4 class="font-semibold">"Our Rights, Our Lives, Our Future"</h4>
+                                <p class="text-sm text-gray-300">Advierte sobre la brecha entre educación digital y protección frente a riesgos online</p>
+                            </div>
+                        </div>
+                        <ul class="list-disc ml-5 text-sm space-y-1">
+                            <li>El 40% de los países carecen de políticas adecuadas de protección digital para menores</li>
+                            <li>Solo un 25% de los programas educativos incluyen alfabetización digital crítica</li>
+                            <li>La exposición no supervisada a contenidos inapropiados aumentó un 63% desde la pandemia</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Right column with health impacts and research -->
+                <div class="flex flex-col">
+                    <div class="data-card border-red-500 p-6 rounded-lg mb-6">
+                        <h3 class="text-xl font-semibold mb-4 text-red-300">
+                            <i class="fas fa-heartbeat mr-2"></i>Impactos en la Salud
+                            <p class="text-xs text-gray-400 mt-2">
+                                Fuente: Clinical Child & Adolescent Psychology Reports (2022-2024), revisión de 14 estudios longitudinales.
+                            </p>
+                            
+                        </h3>
+                        <div class="grid grid-cols-3 gap-2 mb-4">
+                            <div class="bg-gray-800 bg-opacity-50 p-3 rounded-lg text-center">
+                                <i class="fas fa-brain text-yellow-400 text-2xl mb-2"></i>
+                                <h4 class="font-semibold text-sm">Déficit de Atención</h4>
+                                <p class="text-red-300 font-bold text-lg">+53%</p>
+                            </div>
+                            <div class="bg-gray-800 bg-opacity-50 p-3 rounded-lg text-center">
+                                <i class="fas fa-sad-tear text-yellow-400 text-2xl mb-2"></i>
+                                <h4 class="font-semibold text-sm">Ansiedad</h4>
+                                <p class="text-red-300 font-bold text-lg">+70%</p>
+                            </div>
+                            <div class="bg-gray-800 bg-opacity-50 p-3 rounded-lg text-center">
+                                <i class="fas fa-mobile-alt text-yellow-400 text-2xl mb-2"></i>
+                                <h4 class="font-semibold text-sm">Dependencia</h4>
+                                <p class="text-red-300 font-bold text-lg">+85%</p>
+                            </div>
+                        </div>
+                        <p class="text-sm">Los adolescentes que utilizan redes sociales más de 3 horas diarias presentan un riesgo 35% mayor de desarrollar síntomas de depresión y problemas de autoestima.</p>
+                        <p class="text-xs text-gray-400 mt-2">Fuente: Estudios clínicos 2022-2024 en adolescentes de 12-17 años</p>
+                    </div>
+                    
+                    <div class="data-card border-green-400 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-4 text-green-300">
+                            <i class="fas fa-search mr-2"></i>Investigaciones Adicionales
+                        </h3>
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mr-3">
+                                <img src="https://www.commonsensemedia.org/sites/default/files/styles/square_192x192/public/commons-logo-icon-color.png" alt="Common Sense Media" class="h-8">
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Common Sense Media (2024)</h4>
+                                <p class="text-xs text-gray-300">Estudio "Double-Edged Sword" sobre hábitos digitales y salud mental</p>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="bg-gray-800 bg-opacity-40 p-3 rounded-md">
+                                <p class="text-xs font-semibold text-green-300 mb-1">DATO CLAVE</p>
+                                <p class="text-sm">El 64% de jóvenes con depresión sienten que la vida de los demás es mejor al usar redes sociales</p>
+                            </div>
+                            <div class="bg-gray-800 bg-opacity-40 p-3 rounded-md">
+                                <p class="text-xs font-semibold text-green-300 mb-1">DATO CLAVE</p>
+                                <p class="text-sm">El tiempo de pantalla recreativa aumentó 17% desde 2019 en niños de 8-12 años</p>
+                            </div>
+                        </div>
+                        <p class="text-xs text-gray-400 mt-3 italic">El 38% de niños entre 8-12 años ya tienen perfiles en redes sociales a pesar de las restricciones de edad</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="page-number">3/8</div>
+    </div>
+    
+    <script>
+        // Data for screen time chart
+        const ctx = document.getElementById('screenTimeChart').getContext('2d');
+        const chart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['2010', '2015', '2020', '2023'],
+                datasets: [{
+                    label: 'Horas diarias en pantallas (niños y adolescentes)',
+                    data: [3.2, 4.8, 6.5, 7.4],
+                    backgroundColor: [
+                        'rgba(66, 153, 225, 0.5)',
+                        'rgba(66, 153, 225, 0.6)',
+                        'rgba(255, 107, 107, 0.7)',
+                        'rgba(255, 107, 107, 0.9)'
+                    ],
+                    borderColor: [
+                        'rgba(66, 153, 225, 1)',
+                        'rgba(66, 153, 225, 1)',
+                        'rgba(255, 107, 107, 1)',
+                        'rgba(255, 107, 107, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: 'rgba(255, 255, 255, 0.8)',
+                            font: {
+                                family: "'Open Sans', sans-serif",
+                                size: 11
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 10,
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.1)'
+                        },
+                        ticks: {
+                            color: 'rgba(255, 255, 255, 0.7)',
+                            font: {
+                                family: "'Open Sans', sans-serif",
+                                size: 10
+                            }
+                        }
+                    },
+                    x: {
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.1)'
+                        },
+                        ticks: {
+                            color: 'rgba(255, 255, 255, 0.7)',
+                            font: {
+                                family: "'Open Sans', sans-serif",
+                                size: 10
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+    <footer>
+        Prof. Esp. Santiago Hernández | Licencia: CC BY 4.0
+    </footer>
+    
+</body>
+</html>

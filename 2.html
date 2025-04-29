@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frases Clave para Comenzar - Slide 2</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+         body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Open Sans', sans-serif;
+        background-color: #f0f4f8;
+        overflow-x: hidden;
+        overflow-y: auto; /* permitir scroll vertical */
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer {
+        margin-top: auto;
+        background-color: #1a365d;
+        color: #cbd5e0;
+        text-align: center;
+        font-size: 0.8rem;
+        padding: 10px 0;
+    }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+            color: white;
+        }
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .quote-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            border-left: 4px solid;
+            transition: all 0.3s ease;
+        }
+        .quote-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .quote-marks {
+            font-size: 4rem;
+            line-height: 1;
+            opacity: 0.2;
+            font-family: Georgia, serif;
+            position: absolute;
+        }
+        .quote-left {
+            top: -20px;
+            left: 10px;
+        }
+        .quote-right {
+            bottom: -40px;
+            right: 10px;
+        }
+        .network-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 20%),
+                radial-gradient(circle at 80% 30%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 20%),
+                radial-gradient(circle at 40% 70%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 20%),
+                radial-gradient(circle at 90% 90%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 20%);
+            z-index: 0;
+        }
+        .content {
+            position: relative;
+            z-index: 1;
+        }
+        .page-number {
+            position: absolute;
+            bottom: 20px;
+            right: 30px;
+            font-size: 14px;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col">
+        <div class="network-bg"></div>
+        
+        <!-- Abstract network design elements -->
+        <svg class="absolute inset-0 w-full h-full opacity-10" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                    <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+                    <feMerge>
+                        <feMergeNode in="coloredBlur"/>
+                        <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                </filter>
+            </defs>
+            
+            <!-- Connection lines -->
+            <line x1="100" y1="200" x2="300" y2="350" stroke="#4299e1" stroke-width="1" />
+            <line x1="300" y1="350" x2="550" y2="250" stroke="#4299e1" stroke-width="1" />
+            <line x1="550" y1="250" x2="800" y2="400" stroke="#4299e1" stroke-width="1" />
+            <line x1="800" y1="400" x2="1000" y2="300" stroke="#4299e1" stroke-width="1" />
+            <line x1="1000" y1="300" x2="1150" y2="500" stroke="#4299e1" stroke-width="1" />
+            <line x1="1150" y1="500" x2="900" y2="600" stroke="#4299e1" stroke-width="1" />
+            <line x1="900" y1="600" x2="600" y2="550" stroke="#4299e1" stroke-width="1" />
+            <line x1="600" y1="550" x2="300" y2="350" stroke="#4299e1" stroke-width="1" />
+            
+            <!-- Network nodes -->
+            <circle cx="100" cy="200" r="8" fill="#ff6b6b" filter="url(#glow)" />
+            <circle cx="300" cy="350" r="6" fill="#4299e1" filter="url(#glow)" />
+            <circle cx="550" cy="250" r="10" fill="#4299e1" filter="url(#glow)" />
+            <circle cx="800" cy="400" r="7" fill="#ff6b6b" filter="url(#glow)" />
+            <circle cx="1000" cy="300" r="8" fill="#4299e1" filter="url(#glow)" />
+            <circle cx="1150" cy="500" r="6" fill="#ff6b6b" filter="url(#glow)" />
+            <circle cx="900" cy="600" r="9" fill="#4299e1" filter="url(#glow)" />
+            <circle cx="600" cy="550" r="7" fill="#4299e1" filter="url(#glow)" />
+        </svg>
+        
+        <div class="content px-16 py-12 w-full h-full flex flex-col">
+            <div class="mb-4">
+                <h2 class="text-2xl font-semibold text-gray-300 tracking-wide">
+                    <span class="inline-block mr-2"><i class="fas fa-quote-left text-orange-400"></i></span>
+                    Frases Clave para Comenzar
+                </h2>
+            </div>
+            
+            <h1 class="text-4xl font-bold mb-10 text-white border-b border-blue-400 pb-2 inline-block">
+                Perspectivas Cruciales
+            </h1>
+            
+            <div class="flex-grow flex flex-col justify-center space-y-10">
+                <!-- First Quote -->
+                <div class="quote-card border-orange-500 p-8 rounded-lg relative">
+                    <span class="quote-marks quote-left text-orange-500">"</span>
+                    <p class="text-2xl font-semibold mb-4 relative z-10">
+                        "En Internet, si no pagas por el producto, es porque tú eres el producto."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="h-10 w-10 bg-orange-500 rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-film text-white"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold">Tristan Harris</p>
+                            <p class="text-sm text-gray-300">Ex diseñador de Google y protagonista de "El Dilema de las Redes Sociales", documental que expone cómo las plataformas digitales manipulan la atención y el comportamiento de los usuarios</p>
+                        </div>
+                    </div>
+                    <span class="quote-marks quote-right text-orange-500">"</span>
+                </div>
+                
+                <!-- Second Quote -->
+                <div class="quote-card border-blue-400 p-8 rounded-lg relative">
+                    <span class="quote-marks quote-left text-blue-400">"</span>
+                    <p class="text-2xl font-semibold mb-4 relative z-10">
+                        "...Es la primera vez en que los hijos son menos inteligentes que los padres..."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="h-10 w-10 bg-blue-400 rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-brain text-white"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold">Marian Rojas Estapé</p>
+                            <p class="text-sm text-gray-300">Médica psiquiatra española especializada en estrés y ansiedad en la era digital. Investiga cómo la exposición temprana a dispositivos móviles afecta el desarrollo cerebral y las habilidades cognitivas de niños y adolescentes</p>
+                        </div>
+                    </div>
+                    <span class="quote-marks quote-right text-blue-400">"</span>
+                </div>
+            </div>
+            
+            <div class="flex justify-end mt-4">
+                <div class="flex items-center space-x-3">
+                    <div class="flex space-x-1">
+                        <i class="fas fa-exclamation-circle text-yellow-400"></i>
+                        <span class="text-sm text-gray-300">Estas frases nos invitan a reflexionar sobre nuestra relación con la tecnología y su impacto en el desarrollo cognitivo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="page-number">2/8</div>
+        <footer>
+            Prof. Esp. Santiago Hernández | Licencia: CC BY 4.0
+        </footer>
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impacto de las Redes Sociales, el Uso de Pantallas y la IA</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: 'Open Sans', sans-serif;
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+            color: #f9fafb;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .title {
+            font-weight: 700;
+            font-size: 2.8rem;
+            line-height: 1.2;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        .subtitle {
+            font-weight: 500;
+            font-size: 1.6rem;
+            opacity: 0.9;
+            margin-top: 1rem;
+        }
+        .network-bg {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 800 800"><g fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"><path d="M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63"/><path d="M-31 229L237 261 390 382 731 154 769 229 695 311 769 229"/><path d="M520 660L578 842 731 737 840 599 769 229 520 660 295 764 40 599 520 660"/><path d="M520 660L-31 229 126.5 79.5 237 261 102 382 40 599 520 660"/></g></svg>');
+            opacity: 0.8;
+            z-index: -1;
+        }
+        .presenter {
+            font-size: 1.2rem;
+            margin-top: 2rem;
+            opacity: 0.8;
+        }
+        .icon-grid {
+            display: flex;
+            justify-content: center;
+            margin-top: 3rem;
+        }
+        .icon-circle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+        }
+        .icon-circle:hover {
+            transform: scale(1.1);
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        .accent-line {
+            height: 4px;
+            width: 100px;
+            background: linear-gradient(90deg, #f97316 0%, #ef4444 100%);
+            margin: 1.5rem auto;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container flex flex-col items-center justify-center p-16 relative">
+        <div class="network-bg"></div>
+        
+        <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-orange-500 to-red-500"></div>
+        
+        <div class="z-10 text-center max-w-4xl">
+            <h1 class="title">Impacto de las Redes Sociales, el uso de pantallas y la Inteligencia Artificial</h1>
+            <div class="accent-line"></div>
+            <h2 class="subtitle">en las nuevas generaciones</h2>
+            
+            <p class="presenter mt-16">Presentado por: <span class="font-semibold">Santiago Hernández</span></p>
+        </div>
+        
+        <div class="icon-grid mt-12">
+            <div class="icon-circle">
+                <i class="fas fa-mobile-alt text-4xl text-blue-200"></i>
+            </div>
+            <div class="icon-circle">
+                <i class="fas fa-brain text-4xl text-blue-200"></i>
+            </div>
+            <div class="icon-circle">
+                <i class="fas fa-network-wired text-4xl text-blue-200"></i>
+            </div>
+            <div class="icon-circle">
+                <i class="fas fa-robot text-4xl text-blue-200"></i>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-6 right-6 text-sm opacity-70">
+            <footer>
+                Prof. Esp. Santiago Hernández | Licencia: CC BY 4.0
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

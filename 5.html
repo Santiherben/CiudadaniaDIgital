@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dimensiones Clave para Educar en lo Digital - Slide 5</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f0f4f8;
+            overflow-x: hidden;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+            color: white;
+        }
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .network-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 20%),
+                radial-gradient(circle at 80% 30%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 20%),
+                radial-gradient(circle at 40% 70%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 20%),
+                radial-gradient(circle at 90% 90%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 20%);
+            z-index: 0;
+        }
+        .content {
+            position: relative;
+            z-index: 1;
+        }
+        .page-number {
+            position: absolute;
+            bottom: 20px;
+            right: 30px;
+            font-size: 14px;
+            opacity: 0.5;
+        }
+        .dimension-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+            border-top: 4px solid;
+            height: 100%;
+        }
+        .dimension-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .icon-container {
+            width: 72px;
+            height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-bottom: 16px;
+            transition: transform 0.3s ease;
+        }
+        .dimension-card:hover .icon-container {
+            transform: scale(1.1);
+        }
+        .pattern-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.05;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col">
+        <div class="network-bg"></div>
+        <div class="pattern-overlay"></div>
+        
+        <!-- Abstract network design elements -->
+        <svg class="absolute inset-0 w-full h-full opacity-10" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                    <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+                    <feMerge>
+                        <feMergeNode in="coloredBlur"/>
+                        <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                </filter>
+            </defs>
+            
+            <!-- Connection lines representing knowledge flow -->
+            <line x1="200" y1="150" x2="450" y2="200" stroke="#4299e1" stroke-width="1" />
+            <line x1="450" y1="200" x2="650" y2="150" stroke="#4299e1" stroke-width="1" />
+            <line x1="650" y1="150" x2="850" y2="250" stroke="#4299e1" stroke-width="1" />
+            <line x1="850" y1="250" x2="1050" y2="200" stroke="#4299e1" stroke-width="1" />
+            
+            <line x1="200" y1="350" x2="450" y2="400" stroke="#4299e1" stroke-width="1" />
+            <line x1="450" y1="400" x2="650" y2="350" stroke="#4299e1" stroke-width="1" />
+            <line x1="650" y1="350" x2="850" y2="450" stroke="#4299e1" stroke-width="1" />
+            <line x1="850" y1="450" x2="1050" y2="400" stroke="#4299e1" stroke-width="1" />
+            
+            <line x1="200" y1="550" x2="450" y2="600" stroke="#4299e1" stroke-width="1" />
+            <line x1="450" y1="600" x2="650" y2="550" stroke="#4299e1" stroke-width="1" />
+            <line x1="650" y1="550" x2="850" y2="650" stroke="#4299e1" stroke-width="1" />
+            <line x1="850" y1="650" x2="1050" y2="600" stroke="#4299e1" stroke-width="1" />
+            
+            <line x1="200" y1="150" x2="200" y2="550" stroke="#4299e1" stroke-width="1" opacity="0.5" />
+            <line x1="450" y1="200" x2="450" y2="600" stroke="#4299e1" stroke-width="1" opacity="0.5" />
+            <line x1="650" y1="150" x2="650" y2="550" stroke="#4299e1" stroke-width="1" opacity="0.5" />
+            <line x1="850" y1="250" x2="850" y2="650" stroke="#4299e1" stroke-width="1" opacity="0.5" />
+            <line x1="1050" y1="200" x2="1050" y2="600" stroke="#4299e1" stroke-width="1" opacity="0.5" />
+            
+            <!-- Network nodes -->
+            <circle cx="200" cy="150" r="5" fill="#ff6b6b" filter="url(#glow)" />
+            <circle cx="450" cy="200" r="4" fill="#4299e1" filter="url(#glow)" />
+            <circle cx="650" cy="150" r="6" fill="#4299e1" filter="url(#glow)" />
+            <circle cx="850" cy="250" r="4" fill="#ff6b6b" filter="url(#glow)" />
+            <circle cx="1050" cy="200" r="5" fill="#4299e1" filter="url(#glow)" />
+            
+            <circle cx="200" cy="350" r="4" fill="#4299e1" filter="url(#glow)" />
+            <circle cx="450" cy="400" r="6" fill="#ff6b6b" filter="url(#glow)" />
+            <circle cx="650" cy="350" r="4" fill="#4299e1" filter="url(#glow)" />
+            <circle cx="850" cy="450" r="5" fill="#ff6b6b" filter="url(#glow)" />
+            <circle cx="1050" cy="400" r="4" fill="#4299e1" filter="url(#glow)" />
+            
+            <circle cx="200" cy="550" r="5" fill="#ff6b6b" filter="url(#glow)" />
+            <circle cx="450" cy="600" r="4" fill="#4299e1" filter="url(#glow)" />
+            <circle cx="650" cy="550" r="6" fill="#4299e1" filter="url(#glow)" />
+            <circle cx="850" cy="650" r="4" fill="#ff6b6b" filter="url(#glow)" />
+            <circle cx="1050" cy="600" r="5" fill="#4299e1" filter="url(#glow)" />
+        </svg>
+        
+        <div class="content px-16 py-12 w-full h-full flex flex-col">
+            <div class="mb-4">
+                <h2 class="text-2xl font-semibold text-gray-300 tracking-wide">
+                    <span class="inline-block mr-2"><i class="fas fa-map text-blue-400"></i></span>
+                    Dimensiones Clave para Educar en lo Digital
+                </h2>
+            </div>
+            
+            <h1 class="text-4xl font-bold mb-10 text-white border-b border-blue-400 pb-2 inline-block">
+                Áreas de Enfoque para una Alfabetización Digital Crítica
+            </h1>
+            
+            <div class="grid grid-cols-3 gap-6 flex-grow">
+                <!-- Salud Digital -->
+                <div class="dimension-card border-green-400 p-6 rounded-lg flex flex-col items-center text-center">
+                    <div class="icon-container bg-green-800 bg-opacity-30">
+                        <i class="fas fa-heartbeat text-green-400 text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-green-300">Salud Digital</h3>
+                    <p class="text-sm text-gray-300 mb-4">Equilibrio entre el uso de dispositivos y el bienestar físico y mental.</p>
+                    <ul class="text-xs text-left w-full">
+                        <li class="mb-1 flex items-center">
+                            <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                            <span>Tiempo de pantalla saludable</span>
+                        </li>
+                        <li class="mb-1 flex items-center">
+                            <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                            <span>Prevención de la fatiga digital</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                            <span>Hábitos posturales y descanso visual</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Adicciones a las Pantallas -->
+                <div class="dimension-card border-red-500 p-6 rounded-lg flex flex-col items-center text-center">
+                    <div class="icon-container bg-red-800 bg-opacity-30">
+                        <i class="fas fa-mobile-alt text-red-400 text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-red-300">Adicciones a las Pantallas</h3>
+                    <p class="text-sm text-gray-300 mb-4">Reconocimiento y prevención de patrones de dependencia tecnológica.</p>
+                    <ul class="text-xs text-left w-full">
+                        <li class="mb-1 flex items-center">
+                            <i class="fas fa-check-circle text-red-400 mr-2"></i>
+                            <span>Señales de alerta y autoregulación</span>
+                        </li>
+                        <li class="mb-1 flex items-center">
+                            <i class="fas fa-check-circle text-red-400 mr-2"></i>
+                            <span>Economía de la atención y dopamina</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-red-400 mr-2"></i>
+                            <span>Estrategias de desconexión consciente</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Huella Digital -->
+                <div class="dimension-card border-blue-500 p-6 rounded-lg flex flex-col items-center text-center">
+                    <div class="icon-container bg-blue-800 bg-opacity-30">
+                        <i class="fas fa-fingerprint text-blue-400 text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-300">Huella Digital</h3>
+                    <p class="text-sm text-gray-300 mb-4">Gestión consciente de la identidad y rastro en el mundo digital.</p>
+                    <ul class="text-xs text-left w-full">
+                        <li class="mb-1 flex items-center">
+                            <i class="fas fa-check-circle text-blue-400 mr-2"></i>
+                            <span>Permanencia de contenido publicado</span>
+                        </li>
+                        <li class="mb-1 flex items-center">
+                            <i class="fas fa-check-circle text-blue-400 mr-2"></i>
+                            <span>Identidad digital y reputación online</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-400 mr-2"></i>
+                            <span>Impacto futuro en oportunidades profesionales</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Privacidad y Protección de Datos -->
+                <div class="dimension-card border-yellow-500 p-6 rounded-lg flex flex-col items-center text-center">
+                    <div class="icon-container bg-yellow-800 bg-opacity-30">
+                        <i class="fas fa-shield-alt text-yellow-400 text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-yellow-300">Privacidad y Protección de Datos</h3>
+                    <p class="text-sm text-gray-300 mb-4">Seguridad de la información personal y comprensión de riesgos.</p>
+                    <ul class="text-xs text-left w-full">
+                        <li class="mb-1 flex items-center">
+                            <i class="fas fa-check-circle text-yellow-400 mr-2"></i>
+                            <span>Configuraciones de privacidad</span>
+                        </li>
+                        <li class="mb-1 flex items-center">
+                            <i class="fas fa-check-circle text-yellow-400 mr-2"></i>
+                            <span>Modelos de negocio basados en datos</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-yellow-400 mr-2"></i>
+                            <span>Derechos digitales fundamentales</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Convivencia Digital -->
+                <div class="dimension-card border-purple-500 p-6 rounded-lg flex flex-col items-center text-center">
+                    <div class="icon-container bg-purple-800 bg-opacity-30">
+                        <i class="fas fa-users text-purple-400 text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-purple-300">Convivencia Digital</h3>
+                    <p class="text-sm text-gray-300 mb-4">Interacciones saludables y responsables en entornos online.</p>
+                    <ul class="text-xs text-left w-full">
+                        <li class="mb-1 flex items-center">
+                            <i class="fas fa-check-circle text-purple-400 mr-2"></i>
+                            <span>Ciudadanía digital y netiqueta</span>
+                        </li>
+                        <li class="mb-1 flex items-center">
+                            <i class="fas fa-check-circle text-purple-400 mr-2"></i>
+                            <span>Prevención de ciberacoso</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-purple-400 mr-2"></i>
+                            <span>Empatía digital y comunicación asertiva</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Inteligencia Artificial y Automatización -->
+                <div class="dimension-card border-orange-500 p-6 rounded-lg flex flex-col items-center text-center">
+                    <div class="icon-container bg-orange-800 bg-opacity-30">
+                        <i class="fas fa-robot text-orange-400 text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-orange-300">Inteligencia Artificial y Automatización</h3>
+                    <p class="text-sm text-gray-300 mb-4">Comprensión y relación consciente con sistemas inteligentes.</p>
+                    <ul class="text-xs text-left w-full">
+                        <li class="mb-1 flex items-center">
+                            <i class="fas fa-check-circle text-orange-400 mr-2"></i>
+                            <span>Funcionamiento básico de algoritmos</span>
+                        </li>
+                        <li class="mb-1 flex items-center">
+                            <i class="fas fa-check-circle text-orange-400 mr-2"></i>
+                            <span>Sesgos algorítmicos y filtros burbuja</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-orange-400 mr-2"></i>
+                            <span>Impacto en empleos y habilidades futuras</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mt-6 bg-gray-800 bg-opacity-50 p-3 rounded-lg flex items-center">
+                <div class="h-10 w-10 bg-blue-500 bg-opacity-20 rounded-full flex items-center justify-center mr-3">
+                    <i class="fas fa-lightbulb text-blue-300 text-xl"></i>
+                </div>
+                <p class="text-sm text-gray-300">
+                    <span class="font-semibold text-white">Enfoque integral:</span> Estas dimensiones se interrelacionan y deben abordarse desde una perspectiva holística para desarrollar competencias críticas en el entorno digital.
+                </p>
+            </div>
+        </div>
+        
+        <div class="page-number">5/8</div>
+    </div>
+    <footer>
+        Prof. Esp. Santiago Hernández | Licencia: CC BY 4.0
+    </footer>
+    
+</body>
+</html>
