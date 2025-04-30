@@ -3,19 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cierre | Impacto de las Redes Sociales</title>
+    <title>Dilemas Éticos | Impacto de las Redes Sociales</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            font-family: 'Open Sans', sans-serif;
-            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
-            color: #f9fafb;
-        }
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Open Sans', sans-serif;
+        background: linear-gradient(135deg, #273f84 0%, #1e40af 100%);
+        color: #f9fafb;
+        overflow-x: hidden;
+        overflow-y: auto; /* habilitar scroll vertical */
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
         .slide-container {
             width: 1280px;
             min-height: 720px;
@@ -28,7 +32,7 @@
         }
         .slide-title {
             font-weight: 700;
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             line-height: 1.2;
             text-shadow: 0 2px 4px rgba(0,0,0,0.2);
         }
@@ -49,72 +53,78 @@
             margin: 1rem auto;
             border-radius: 2px;
         }
-        .action-card {
-            background-color: rgba(30, 58, 138, 0.6);
-            border-radius: 12px;
-            backdrop-filter: blur(5px);
-            padding: 2rem;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-            border-left: 4px solid #f97316;
-            position: relative;
-            overflow: hidden;
-            transition: transform 0.3s ease;
-        }
-        .action-card:hover {
-            transform: translateX(10px);
-        }
-        .action-title {
-            font-weight: 700;
-            font-size: 1.4rem;
-            margin-bottom: 0.8rem;
-            color: #f97316;
-            font-family: 'Montserrat', sans-serif;
-        }
-        .action-content {
-            font-size: 1.1rem;
-            line-height: 1.5;
-        }
-        .final-quote {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.8rem;
-            font-weight: 600;
-            font-style: italic;
-            text-align: center;
-            margin-top: 2rem;
-            line-height: 1.3;
-            position: relative;
-            z-index: 10;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
-        }
-        .icon-circle {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #f97316, #ef4444);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 1.5rem;
-            flex-shrink: 0;
-            box-shadow: 0 5px 15px rgba(239, 68, 68, 0.3);
-        }
-        .hexagon-bg {
-            position: absolute;
-            right: -20px;
-            bottom: -20px;
-            width: 150px;
-            height: 150px;
-            opacity: 0.07;
-            z-index: 0;
-        }
         .subtitle {
             font-weight: 500;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             opacity: 0.9;
             margin-top: 0.5rem;
             margin-bottom: 2rem;
             text-align: center;
+        }
+        .dilemma-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 15px;
+        }
+        .dilemma-row {
+            transition: transform 0.3s ease;
+        }
+        .dilemma-row:hover {
+            transform: translateY(-5px);
+        }
+        .dilemma-cell {
+            background-color: rgba(30, 58, 138, 0.6);
+            backdrop-filter: blur(5px);
+            padding: 1.5rem;
+            position: relative;
+            min-height: 70px;
+        }
+        .dilemma-left {
+            border-radius: 8px 0 0 8px;
+            border-left: 4px solid #3b82f6;
+        }
+        .dilemma-right {
+            border-radius: 0 8px 8px 0;
+            border-right: 4px solid #f97316;
+        }
+        .vs-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #3b82f6 0%, #f97316 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            font-size: 0.9rem;
+        }
+        .dilemma-title {
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        .dilemma-desc {
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+        .icon-circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+        }
+        .left-icon {
+            background: rgba(59, 130, 246, 0.2);
+            color: #3b82f6;
+        }
+        .right-icon {
+            background: rgba(249, 115, 22, 0.2);
+            color: #f97316;
         }
     </style>
 </head>
@@ -124,82 +134,160 @@
         
         <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-orange-500 to-red-500"></div>
         
-        <h1 class="slide-title text-center">Cierre con llamado a la acción</h1>
+        <h1 class="slide-title text-center">Dilemas Éticos para el Debate</h1>
         <div class="accent-line"></div>
-        <p class="subtitle">Construyendo el futuro digital de las nuevas generaciones</p>
+        <p class="subtitle">Tensiones fundamentales en la era digital que requieren reflexión colectiva</p>
         
-        <div class="flex-grow">
-            <!-- Action Point 1 -->
-            <div class="action-card">
-                <svg class="hexagon-bg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <polygon points="50 0, 93.3 25, 93.3 75, 50 100, 6.7 75, 6.7 25" fill="#ffffff"/>
-                </svg>
-                <div class="flex items-center z-10 relative">
-                    <div class="icon-circle">
-                        <i class="fas fa-book-reader text-2xl text-white"></i>
+        <table class="dilemma-table mt-4">
+            <!-- Prohibir vs Regular -->
+            <tr class="dilemma-row">
+                <td class="dilemma-cell dilemma-left">
+                    <div class="flex items-start">
+                        <div class="icon-circle left-icon">
+                            <i class="fas fa-ban"></i>
+                        </div>
+                        <div>
+                            <h3 class="dilemma-title">Prohibir</h3>
+                            <p class="dilemma-desc">Limitar completamente el acceso a tecnologías potencialmente dañinas para proteger a los más vulnerables.</p>
+                        </div>
                     </div>
-                    <div>
-                        <h3 class="action-title">Alfabetización digital crítica</h3>
-                        <p class="action-content">
-                            Necesitamos desarrollar habilidades que vayan más allá del uso instrumental de la tecnología, 
-                            fomentando la capacidad de análisis, verificación de fuentes y comprensión de los modelos de negocio 
-                            que subyacen a las plataformas digitales.
-                        </p>
+                </td>
+                <td class="px-2 text-center">
+                    <div class="vs-icon">VS</div>
+                </td>
+                <td class="dilemma-cell dilemma-right">
+                    <div class="flex items-start">
+                        <div class="icon-circle right-icon">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <div>
+                            <h3 class="dilemma-title">Regular</h3>
+                            <p class="dilemma-desc">Establecer normativas que permitan un uso responsable mientras se minimizan los riesgos asociados.</p>
+                        </div>
                     </div>
-                </div>
-            </div>
+                </td>
+            </tr>
             
-            <!-- Action Point 2 -->
-            <div class="action-card">
-                <svg class="hexagon-bg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <polygon points="50 0, 93.3 25, 93.3 75, 50 100, 6.7 75, 6.7 25" fill="#ffffff"/>
-                </svg>
-                <div class="flex items-center z-10 relative">
-                    <div class="icon-circle">
-                        <i class="fas fa-brain text-2xl text-white"></i>
+            <!-- Libertad vs Control -->
+            <tr class="dilemma-row">
+                <td class="dilemma-cell dilemma-left">
+                    <div class="flex items-start">
+                        <div class="icon-circle left-icon">
+                            <i class="fas fa-dove"></i>
+                        </div>
+                        <div>
+                            <h3 class="dilemma-title">Libertad</h3>
+                            <p class="dilemma-desc">Permitir que los usuarios tomen sus propias decisiones digitales, fomentando la autonomía y el pensamiento crítico.</p>
+                        </div>
                     </div>
-                    <div>
-                        <h3 class="action-title">Pensamiento Ético y Crítico</h3>
-                        <p class="action-content">
-                            Educar no es solo enseñar a usar herramientas, sino formar criterios para distinguir 
-                            entre lo valioso y lo superfluo, entre lo auténtico y lo manipulado, entre lo que nos potencia 
-                            y lo que nos limita como seres humanos.
-                        </p>
+                </td>
+                <td class="px-2 text-center">
+                    <div class="vs-icon">VS</div>
+                </td>
+                <td class="dilemma-cell dilemma-right">
+                    <div class="flex items-start">
+                        <div class="icon-circle right-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div>
+                            <h3 class="dilemma-title">Control</h3>
+                            <p class="dilemma-desc">Implementar sistemas de supervisión y filtrado para proteger a las nuevas generaciones de contenidos nocivos.</p>
+                        </div>
                     </div>
-                </div>
-            </div>
+                </td>
+            </tr>
             
-            <!-- Action Point 3 -->
-            <div class="action-card">
-                <svg class="hexagon-bg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <polygon points="50 0, 93.3 25, 93.3 75, 50 100, 6.7 75, 6.7 25" fill="#ffffff"/>
-                </svg>
-                <div class="flex items-center z-10 relative">
-                    <div class="icon-circle">
-                        <i class="fas fa-users-cog text-2xl text-white"></i>
+            <!-- Innovación vs Precaución -->
+            <tr class="dilemma-row">
+                <td class="dilemma-cell dilemma-left">
+                    <div class="flex items-start">
+                        <div class="icon-circle left-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div>
+                            <h3 class="dilemma-title">Innovación</h3>
+                            <p class="dilemma-desc">Abrazar el desarrollo tecnológico acelerado para aprovechar sus beneficios y oportunidades sin restricciones.</p>
+                        </div>
                     </div>
-                    <div>
-                        <h3 class="action-title">Usuarios Activos, No Consumidores Pasivos</h3>
-                        <p class="action-content">
-                            Debemos formar generaciones que creen y transformen la tecnología, no solo que la consuman. 
-                            Ciudadanos digitales conscientes de sus derechos, de su huella digital y de su capacidad 
-                            para influir en el desarrollo tecnológico futuro.
-                        </p>
+                </td>
+                <td class="px-2 text-center">
+                    <div class="vs-icon">VS</div>
+                </td>
+                <td class="dilemma-cell dilemma-right">
+                    <div class="flex items-start">
+                        <div class="icon-circle right-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div>
+                            <h3 class="dilemma-title">Precaución</h3>
+                            <p class="dilemma-desc">Adoptar un enfoque cauteloso que evalúe los impactos a largo plazo antes de la adopción generalizada.</p>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="final-quote mt-4">
-            "La tecnología más poderosa seguirá siendo siempre la mente humana crítica y consciente"
-        </div>
+                </td>
+            </tr>
+            
+            <!-- Privacidad vs Personalización -->
+            <tr class="dilemma-row">
+                <td class="dilemma-cell dilemma-left">
+                    <div class="flex items-start">
+                        <div class="icon-circle left-icon">
+                            <i class="fas fa-user-secret"></i>
+                        </div>
+                        <div>
+                            <h3 class="dilemma-title">Privacidad</h3>
+                            <p class="dilemma-desc">Proteger los datos personales y el anonimato como derecho fundamental en la era digital.</p>
+                        </div>
+                    </div>
+                </td>
+                <td class="px-2 text-center">
+                    <div class="vs-icon">VS</div>
+                </td>
+                <td class="dilemma-cell dilemma-right">
+                    <div class="flex items-start">
+                        <div class="icon-circle right-icon">
+                            <i class="fas fa-puzzle-piece"></i>
+                        </div>
+                        <div>
+                            <h3 class="dilemma-title">Personalización</h3>
+                            <p class="dilemma-desc">Utilizar datos personales para ofrecer experiencias a medida que mejoren la satisfacción del usuario.</p>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            
+            <!-- Tecnología vs Humanismo -->
+            <tr class="dilemma-row">
+                <td class="dilemma-cell dilemma-left">
+                    <div class="flex items-start">
+                        <div class="icon-circle left-icon">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <div>
+                            <h3 class="dilemma-title">Tecnología</h3>
+                            <p class="dilemma-desc">Priorizar el avance tecnológico como motor del progreso y solución a los problemas sociales.</p>
+                        </div>
+                    </div>
+                </td>
+                <td class="px-2 text-center">
+                    <div class="vs-icon">VS</div>
+                </td>
+                <td class="dilemma-cell dilemma-right">
+                    <div class="flex items-start">
+                        <div class="icon-circle right-icon">
+                            <i class="fas fa-book-reader"></i>
+                        </div>
+                        <div>
+                            <h3 class="dilemma-title">Humanismo</h3>
+                            <p class="dilemma-desc">Centrar el desarrollo tecnológico en valores humanos, bienestar emocional y conexiones significativas.</p>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
         
         <div class="absolute bottom-6 right-6 text-sm opacity-70">
-            <p>8/8 | Impacto de las Redes Sociales, Pantallas e IA</p>
+            <p>7/8 | Impacto de las Redes Sociales, Pantallas e IA</p>
         </div>
     </div>
-    <footer>
-        Prof. Esp. Santiago Hernández | Licencia: CC BY 4.0
-    </footer>
 </body>
 </html>
